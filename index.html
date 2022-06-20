@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+    .attribution {font-size: 11px; text-align: center;}
+    .attribution a {color: hsl(228, 45%, 44%);}
+
+    :root {
+      ---trans-white: hsla(0, 0%, 100%, 0.75);
+      ---light-gray: hsl(0, 0%, 95%);
+      ---orange: hsl(31, 77%, 52%);
+      ---cyan: hsl(184, 100%, 22%);
+      ---dark-cyan: hsl(179, 100%, 13%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      color: white;
+    }
+
+    .container {
+      padding-top: 100px;
+      margin: auto;
+      max-width: 960px;
+      display: flex;
+
+    }
+    h1 {
+      font-family: 'Big Shoulders Display', cursive;
+      color: var(---light-gray);
+    }
+
+    p ,.learnMoreBtn {
+      font-family: 'Lexend Deca', sans-serif;
+      color: var(---trans-white);
+    }
+
+    #sedan {
+      background-color: var(---orange);
+    }
+
+    #suv {
+      background-color: var(---cyan);
+    }
+
+    #luxury {
+      background-color: var(---dark-cyan);
+    }
+
+    .cards {
+      height: 375px;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .learnMoreBtn {
+      padding: 10px 20px;
+      border: 2px solid var(---light-gray);
+      border-radius: 30px;
+      background-color: var(---light-gray);
+    }
+
+
+    #luxury .learnMoreBtn:hover,
+    #suv .learnMoreBtn:hover,
+    #sedan .learnMoreBtn:hover {
+      cursor: pointer;
+      color: var(---light-gray);
+    }
+
+    #sedan .learnMoreBtn {
+      color: var(---orange);
+    }
+    #sedan .learnMoreBtn:hover {
+      background-color: var(---orange);
+    }
+
+    #suv .learnMoreBtn {
+      color: var(---cyan);
+    }
+    #suv .learnMoreBtn:hover {
+      background-color: var(---cyan);
+    }
+
+    #luxury .learnMoreBtn {
+      color: var(---dark-cyan);
+    }
+    #luxury .learnMoreBtn:hover {
+      background-color: var(---dark-cyan);
+    }
+
+
+    @media (max-width: 720px) {
+
+      .container {
+        max-width: 375px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div id="sedan" class="cards">
+    <img src="images/icon-sedans.svg" alt="">
+    <h1>Sedans</h1>
+    <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+      or on your next road trip.</p>
+    <div class="learnMoreBtn">Learn More</div>
+  </div>
+  <div id="suv" class="cards">
+    <img src="images/icon-suvs.svg" alt="">
+    <h1>SUVs</h1>
+    <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+      and off-road adventures.</p>
+    <div class="learnMoreBtn">Learn More</div>
+  </div>
+  <div id="luxury" class="cards">
+    <img src="images/icon-luxury.svg" alt="">
+    <h1>Luxury</h1>
+    <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+      rental and arrive in style.</p>
+    <div class="learnMoreBtn">Learn More</div>
+  </div>
+</div>
+
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Your Name Here</a>.
+</div>
+
+</body>
+</html>
